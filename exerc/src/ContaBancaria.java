@@ -9,12 +9,16 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
-    public void sacar(float movimentacao){
-        this.saldo = this.saldo-movimentacao;
+    public void sacar(float valor){
+        if(valor<=saldo){
+            this.saldo -= valor;
+        }else{
+            System.out.println("Sem saldo disponível");
+        }
     }
 
-    public void depositar(float movimentacao){
-        this.saldo = this.saldo+movimentacao;
+    public void depositar(float valor){
+        this.saldo += valor;
     }
 
     public void consultarSaldo(){
