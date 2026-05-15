@@ -1,6 +1,6 @@
 public class MovimentacaoBancaria {
     MovimentacaoBancaria(){
-        ContaBancaria c1 = new ContaPoupanca("Maria",1, 3000, 25);
+        ContaPoupanca c1 = new ContaPoupanca("Maria",1, 3000, 25);
         ContaEspecial c2 = new ContaEspecial("Joao", 2, 2000, 500);
 
         c1.depositar(300);
@@ -10,7 +10,9 @@ public class MovimentacaoBancaria {
         c2.sacar(6000);
         c2.sacar(300);
 
-        c1.consultarSaldo();
+        c1.calcularNovoSaldo(10);
+
+        c1.consultarDados();
         c2.consultarSaldo();
     }
 

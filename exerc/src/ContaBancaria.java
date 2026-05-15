@@ -1,4 +1,4 @@
-public class ContaBancaria {
+public abstract class ContaBancaria {
     private String nome;
     private int numConta;
     private float saldo;
@@ -13,7 +13,7 @@ public class ContaBancaria {
         if(valor<=saldo){
             this.saldo -= valor;
         }else{
-            System.out.println("Sem saldo disponível");
+            System.out.println("Sem saldo disponível\n");
         }
     }
 
@@ -21,9 +21,13 @@ public class ContaBancaria {
         this.saldo += valor;
     }
 
-    public void consultarSaldo(){
-        System.out.println("Saldo atual: "+saldo);
+    public void consultarDados(){
+        System.out.println("Nome: "+nome);
+        System.out.println("Numero da conta: "+numConta);
+        System.out.println("Saldo atual: "+saldo+"\n");
     }
+
+    public abstract void consultarSaldo();
 
     public String getNome() {
         return nome;

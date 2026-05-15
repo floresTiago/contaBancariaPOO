@@ -10,4 +10,12 @@ public class ContaPoupanca extends ContaBancaria {
         super.setSaldo(getSaldo()+(getSaldo()*taxaRendimento/100));
     }
 
+    public void consultarDados(){
+        System.out.println("Tipo da conta: Conta Poupança");
+        super.consultarDados();
+    }
+
+    public void consultarSaldo(){
+        System.out.println("Saldo atual: "+super.getSaldo()+"\n");
+    }
 }
